@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>[FreeCodeCamp Project] Open Weather API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://use.fontawesome.com/a7ff91a450.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div id='head-margin' style='height:45px;'></div>
+<header style='text-align: center; margin-top: 12px;'>
+ <h1>Get Weather</h1>
+ <h5 id='error' style='display:none; text-align: center;'>ERROR: Please enable location settings <br> and click on the globe: <a href='https://codepen.io/giveback007/full/wdWVZz/' target='_top'><i class="fa fa-globe" aria-hidden="true"></i></a></h5>
+ <h2 id='locationName' style='text-align:center;'>By Location</h2>
+</header>
+
+<div style='max-width: 620px; margin: auto; margin-top: 15px; margin-bottom: 12px;'>
+ <div id='weather-div' class='container' style='display:none; text-align: center'>
+  <!-- @ Display None @ -->
+  <div class='row'>
+
+   <div class='row col-sm-5' style='margin:auto;'>
+    <div id='temp' style='margin:auto;'>
+     54F
+    </div>
+    <div id='high-low-div' style='margin:auto;'>
+     <div class='col-sm-12' style='color:rgb(190, 44, 44)'>High<br><span id='high'>60</sapn></div>
+	  <div class='col-sm-12' style='color:rgb(44, 117, 190)'>Low<br><span id='low'>50</sapn></div>
+	</div>
+	  </div>
+	  <div class='col-sm-7 row' style='margin:auto; margin-bottom:12px;'>
+	  <div style='width: 60%;'><span id='icon-name'>partly-cloudy-day</span><br><br><span id='icon'><i class="wi wi-day-cloudy"></i></span></div>
+     <div id='wind' style='width:40%'>Wind Speed<br><span id='wind-speed'>5.5 m/s</span>
+      <!-- Wind speed is in si m/s --><br><i class="wi wi-strong-wind"></i><span id='wind-speed'></span></div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+ <div id='btn-div' class='row'>
+  <div style='margin:auto;'><button onclick="gpsW();" class='btn'>Your Local Weather <i class="fa fa-map-marker" aria-hidden="true"></i>
+		</button></div>
+  <div id='temp-chng' style='margin:auto; display:none'><button onclick='toggle();' class='btn'>To <span id='C-F'>Cels </span><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i>
+     </button>
+  </div>
+ </div>
+
+
+ <div id='img-container' class='container row' style='margin:auto;'>
+  <div>
+   <a href='javascript:void(0)' onclick="gpsW(40.7128, -74.0059);"><img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1134440/New-York.jpg'>
+   </a>
+   <h5>New York</h5></div>
+  <div>
+   <a href='javascript:void(0)' onclick="gpsW(51.5074, 0.1278);"><img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1134440/London.jpg'></a>
+   <h5>London</h5></div>
+  <div>
+   <a href='javascript:void(0)' onclick="gpsW(-33.8688, 151.2092);"><img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/1134440/Sydney.jpg'></a>
+   <h5>Sydney</h5></div>
+ </div>
+
+ <div class='container' style='margin:auto; margin-top:25px; text-align: center;'>
+  <p id='credits'><a href="https://darksky.net/poweredby/">Powered by Dark Sky <i class="fa fa-tint" aria-hidden="true"></i></a><br>
+	  Icons from: <a href='https://erikflowers.github.io/weather-icons/'>ErikFlowers</a></p>
+<p> WebDev <a href="https://www.freecodecamp.com/giveback007" target="_blank">Dovydas Stirpeika <i class="fa fa-free-code-camp" aria-hidden="true"></i></a></p>
+ </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
